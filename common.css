@@ -1,0 +1,508 @@
+ /*
+ ** Diese Seite beinhaltet unsere skinübergreifende css-Datei
+ ** Für skinspezifische Änderungen bitte entsprechende css-Seiten bearbeiten, siehe [[MediaWiki:Common.css/navi]]
+ ** Validation: http://u5l.de/y
+ ** Änderungen hier benötigen dank Cache einige Zeit, bis sie bei allen sichtbar sind.
+ */
+ 
+ /* Abschneiden von herausragenden Zeichen im Seitentitel verhindern
+ ** Font für Reimseiten, erster Versuch
+ */
+ #firstHeading {
+     overflow: visible !important;
+ }
+
+ #firstHeading .mw-body .ns-106 h1 {
+     font-family: 'DejaVu Sans', 'Doulos SIL', sans-serif;
+ }
+
+ 
+ /* Unnötige Elemente auf der Hauptseite entfernen */
+ body.page-Wiktionary_Hauptseite h1.firstHeading,
+ body.page-Wiktionary_Hauptseite #siteSub,
+ body.page-Wiktionary_Hauptseite #contentSub,
+ body.page-Wiktionary_Hauptseite #p-tb,
+ body.page-Wiktionary_Hauptseite #catlinks {
+     display: none !important;
+ }
+ 
+ /* Stabilversionen */
+ .flaggedrevs-color-0 {background-color: #FFFCD9;}
+ .flaggedrevs-color-1 {background-color: #EAFFEA;}
+ .mw-fr-reviewlink { background-color: transparent; }
+ #p-cactions li#ca-stable a {background-color: #F5FFF5;}
+ #p-cactions li#ca-current a {background-color: #FFFEEE;}
+ 
+ /* Linkbilder */
+ .nodeco a:hover {
+     text-decoration: none !important;
+ }
+ 
+ /* Kein Hochladen-Link in der Sidebar */
+ #t-upload {
+     display: none;
+ }
+ 
+ /* Suchfeld-Attrappe mit Link, um Seite in Schnellsuchleiste aufzunehmen */
+ .searchBoxMag {
+     background: url(//upload.wikimedia.org/wiktionary/de/d/d5/Suchfeld-Lupe.png) no-repeat;
+ }
+ .searchBoxLogo {
+     background: url(//upload.wikimedia.org/wiktionary/de/4/4b/Suchfeld-Logo.png) no-repeat;
+ }
+ .searchBoxLogo:hover {
+     background: url(//upload.wikimedia.org/wiktionary/de/5/59/Suchfeld-Logo_blau.png) no-repeat;
+ }
+ 
+ /* Schaltflächen */
+ /* ** Bei diversen Schaltflächen eine Hand als Cursor zeigen ** */
+ #wpDiff,
+ #wpSave,
+ #wpPreview,
+ #wpLoginattempt,
+ #wpMailmypassword,
+ .searchButton,
+ .createboxButton {
+     cursor: pointer;
+ }
+ #nsinvert {
+     cursor: auto !important;
+ }
+
+ /* ** Bei erfolgloser Suche Text in Buttons beim Drüberfahren rot machen ** */
+ 
+ .createboxButton:hover {
+     color: #ba0000;
+ }
+ 
+ /* Stylesheet fuer den 'Ausklappen'-Button an Navileisten, der in Common.js implementiert wird (aus dewiki) */
+ .NavToggle {
+    float: right;
+    font-size: x-small;
+ }
+ 
+ /* Sonderzeichen-Hervorhebung */
+ .specialbasic a:hover,
+ .speciallang a:hover {
+     color: #FF8C00;
+ }
+ 
+ /* Symboleinbindung für [[Vorlage:Audio]] */
+ .audiolink a {
+     background: url("//upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/16px-Loudspeaker.svg.png") center left no-repeat !important;
+     padding-left: 20px !important;
+     padding-right: 0 !important;
+ }
+ 
+ /* Redirects auf [[Spezial:Allpages]] kursiv  */
+ .allpagesredirect {
+     font-style: italic;
+ }
+ 
+ /* Druckeinstellungen */
+ /* ** Sidebar nicht drucken ** */
+ @media print {
+     .NavPic,
+     .NavFrame,
+     .NavToggle,
+     .BoxenVerschmelzen {
+          display: none;
+     }
+     .printNav .NavFrame,
+     /* .,! nur bis #closedNavBar = .closedNavBar: */
+     .printNav .NavContent {
+          display: block !important;
+          margin-top: -20px;
+     }
+ }
+ /* ** Diclaimer etc. nicht drucken ** */
+ @media print {
+     #privacy,
+     #about,
+     #disclaimer,
+     #metadata,
+     #dablink {
+          display:none;
+     }
+ }
+ 
+ /* Hinweisboxen */
+ .messagebox {
+     border: 1px solid #aaaaaa;
+     background-color: #f9f9f9;
+     width: 80%;
+     margin: 0 auto 1em auto;
+     padding: .2em;
+     text-align: justify;
+ }
+ 
+ /* Referenz-links */
+ ol.references {
+     font-size: 90%;
+ }
+ .references-small {
+     font-size: 90%;
+ }
+ .same-bg {
+     background: none;
+ }
+ ol.references > li:target {
+     background-color: #DEF;
+ } 
+ sup.reference:target {
+     background-color: #DEF;
+ }
+ 
+ /* Standardtabellen - doppelt siehe unten
+ .nogrid th,
+ .nogrid td {
+     border: none;
+ }
+ div.float-left, table.float-left, .float-left {
+     float: left;
+     clear: left;
+ }
+ div.float-right, table.float-right, .float-right {
+     float: right;
+     clear: right;
+     margin: 1em 0 1em 1em;
+ }
+ table.centered, .centered {
+     margin-left: auto;
+     margin-right: auto;
+ }
+ */
+
+ /* Vorformatierung für Textbausteine (von [[w:MediaWiki:Common.css]]) */
+.rahmenfarbe1 { /* Wie Inhaltsverzeichnis */
+	border: 1px #aaa;
+}
+.rahmenfarbe2 { /* Unauffällig, geringer Kontrast */
+	border: 1px #e9e9e9;
+}
+.rahmenfarbe3 { /* "Rot", auffällig */
+	border: 1px #c00000;
+}
+.rahmenfarbe4 { /* Neutrale Farbe, deutlich */
+	border: 1px #88a;
+}
+.rahmenfarbe5 { /* "Schwarz", hoher Kontrast */
+	border: 1px #000;
+}
+
+tr.hintergrundfarbe1 th,
+tr th.hintergrundfarbe1,
+table.hintergrundfarbe1,
+.hintergrundfarbe1 { /* Wie Inhaltsverzeichnis */
+	background: #f9f9f9;
+}
+tr.hintergrundfarbe2 th,
+tr th.hintergrundfarbe2,
+table.hintergrundfarbe2,
+.hintergrundfarbe2 { /* "Weiß", für Nicht-Artikel-Seiten, neutral */
+	background: #fff;
+}
+tr.hintergrundfarbe3 th,
+tr th.hintergrundfarbe3,
+table.hintergrundfarbe3,
+.hintergrundfarbe3 { /* "Gelb", auffällig */
+	background: #ffff40;
+}
+tr.hintergrundfarbe4 th,
+tr th.hintergrundfarbe4,
+table.hintergrundfarbe4,
+.hintergrundfarbe4 { /* Sehr auffällig */
+	background: #fa0;
+}
+tr.hintergrundfarbe5 th,
+tr th.hintergrundfarbe5,
+table.hintergrundfarbe5,
+.hintergrundfarbe5 { /* Neutral, abgesetzt */
+	background: #e0e0e0;
+}
+tr.hintergrundfarbe6 th,
+tr th.hintergrundfarbe6,
+table.hintergrundfarbe6,
+.hintergrundfarbe6 { /* Allgemein „bunt“, für Hervorhebungen und Unterscheidungen */
+	background: #b3b7ff;
+}
+tr.hintergrundfarbe7 th,
+tr th.hintergrundfarbe7,
+table.hintergrundfarbe7,
+.hintergrundfarbe7 { /* Allgemein „bunt“, für Hervorhebungen und Unterscheidungen */
+	background: #ffcbcb;
+}
+tr.hintergrundfarbe8 th,
+tr th.hintergrundfarbe8,
+table.hintergrundfarbe8,
+.hintergrundfarbe8 { /* Allgemein „bunt“, für Hervorhebungen und Unterscheidungen */
+	background: #ffebad;
+}
+tr.hintergrundfarbe9 th,
+tr th.hintergrundfarbe9,
+table.hintergrundfarbe9,
+.hintergrundfarbe9 { /* Allgemein „bunt“, für Hervorhebungen und Unterscheidungen */
+	background: #b9ffc5;
+}
+ 
+ /* Shortcutposition */
+ #Shortcut_oben_rechts {
+     display: inline;
+ }
+ #Shortcuts {
+     display: inline;
+     position: absolute;
+     z-index: 1;
+     border: none;
+     background: none;
+     right: 12px;
+     top: 0.3em;
+     float: right;
+     margin: 0.0em;
+     padding: 0.0em;
+     line-height: 1.5em;
+     text-align: right;
+     text-indent: 0;
+     font-size: 85%;
+     text-transform: none;
+     white-space: normal;
+ }
+ 
+ /* Icon für PDF-Dateien in Externlinks erzeugen (von [[w:en:MediaWiki:Common.css]]) */
+ /* ** Für diverse Browser wie Firefox, Opera ** */
+ #bodyContent a[href$=".pdf"].external, 
+ #bodyContent a[href*=".pdf?"].external, 
+ #bodyContent a[href*=".pdf#"].external,
+ #bodyContent a[href$=".PDF"].external, 
+ #bodyContent a[href*=".PDF?"].external, 
+ #bodyContent a[href*=".PDF#"].external {
+     background: url(//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif) center right no-repeat;
+     padding-right: 16px;
+ }
+ 
+ /* ** Für IE ** */
+ span.PDFlink a {
+     background: url(//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif) center right no-repeat !important;
+     padding-right: 17px !important;
+ }
+ 
+ /* font-Deklarationen für bestimmte Schriften mit Sonderzeichen */
+ span.spanAr { font-family: 'Arial Unicode MS', Code2000, 'MPH 2B Damase', 'DejaVu Sans', sans-serif; }
+ .ipa { font-family: 'DejaVu Sans', 'Doulos SIL', 'Lucida Sans Unicode', 'Chrysanthi Unicode', Gentium, GentiumAlt, Code2000, 'TITUS Cyberbit Basic', 'Bitstream Vera Sans', 'Bitstream Cyberbit', 'Hiragino Kaku Gothic Pro', 'Matrix Unicode', 'Lucida Grande', 'MV Boli', 'MS Mincho', Arial, sans-serif; }
+ .ipa2 { font-family: Gentium, Gentium Plus, GentiumAlt, DejaVu Sans, Segoe UI, Lucida Grande, Charis SIL, Doulos SIL, TITUS Cyberbit Basic, Code2000, Lucida Sans Unicode, sans-serif; }
+ .polytonic { font-family: 'Arial Unicode MS', Code2000, 'New Athena Unicode', 'Palatino Linotype', 'DejaVu Sans', Gentium, 'Athena Unicode', 'Lucida Sans Unicode'; }
+ 
+ /* Sichtungslink (effizienter) hervorheben */
+.mw-fr-reviewlink a:link {color: #006400;}
+ 
+ /* hinweis auf nutzungsbedingungen auffälliger und besser abgetrennt */
+.mw-tos-summary { border: solid 1px #c00000; background-color: #ffffff; padding-left: 1em; margin-top: 1em;}
+ 
+ /* Bei URLs, die auf unser Projekt und verwandte Projekte verweisen, den Pfeil ausblenden
+ * Dieser Pfeil dient nur dazu, auf externe Ziele hinzuweisen
+ * Auf den Einsatz der Klasse "plainlinks" kann dadurch verzichtet werden
+ * Quelltext kopiert von //de.wikipedia.org/wiki/MediaWiki:Common.css */
+ #content a[href^="http://de.wiktionary.org"],
+ #content a[href*=".toolforge.org/"] {
+ 	background: none !important;
+ 	padding: 0 !important;
+ }
+
+/* Für auffällige [[MediaWiki:Anoneditwarning]] */
+#mw-anon-edit-warning {
+	width: 80%;
+	background: #d3e1f2;
+	border: 1px solid #1a47ff;
+	margin: 1em auto;
+	padding: 1em;
+ }
+
+
+/* Zebra-Tabellen (von [[w:MediaWiki:Common.css]]) */
+table.wikitable.zebra tr:nth-child(even) {
+	background: white;
+}
+
+.nogrid th,
+.nogrid td {
+	border: none;
+}
+div.float-left,
+table.float-left,
+ul.float-left,
+.float-left {
+	clear: left;
+	float: left;
+	margin: 1em 1em 1em 0;
+}
+div.float-right,
+table.float-right,
+ul.float-right,
+.float-right {
+	clear: right;
+	float: right;
+	margin: .4em 0 .5em .4em !important; /* Flexionsbox soll nicht an Überschrift kleben */
+}
+div.centered,
+table.centered,
+ul.centered,
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+.toptextcells td {
+	vertical-align: top;
+}
+
+/* Begrenzung der im Inhaltsverzeichnis angezeigten Überschriften 
+   <div class="toclimit-3"> z. B. sorgt dafür, dass ==Überschriften== 
+   und ===Überschriften=== angezeigt werden [auch =Überschriften=, 
+   sofern vorhanden] aber keine Überschriften der Ebenen 4 oder 5 usw.
+   (von [[w:en:MediaWiki:Common.css]]) */
+ .toclimit-2 .toclevel-1 ul,
+ .toclimit-3 .toclevel-2 ul,
+ .toclimit-4 .toclevel-3 ul,
+ .toclimit-5 .toclevel-4 ul,
+ .toclimit-6 .toclevel-5 ul,
+ .toclimit-7 .toclevel-6 ul { display: none; }
+
+/* Keine Vergrößerung der Zeilenhöhe durch hochgestellte Zahlen der Fußnoten (von [[w:MediaWiki:Common.css]]) */
+
+sup.reference {
+	font-weight: 400;
+	font-style: normal;
+}
+sup,
+sub {
+	line-height: 1em;
+}
+
+/* Links in Flexionstabellen schwarz färben, Selbstlinks nicht fett */
+.inflection-table a.new { color: #000000; }
+.inflection-table strong.selflink { font-weight: normal; }
+
+/* Class zum Abschalten von Elementen in der Desktop-Ansicht; analog zu nomobile */
+.nodesktop {
+  display: none;
+}
+
+/* Textgröße aus Vorlage hierher wg. Desktop/Mobile Unterschied */
+.SieheAuchText { font-size: 12px; }
+/* Links in Vorlage:Siehe_auch fett darstellen */
+.SieheAuch a {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+ /***** Teileinträge besser abgrenzen (Stil 1) *****/
+.ns-0 #mw-content-text h2 {
+   clear: none;
+   border-top: solid 1px #aaaaaa;
+   border-bottom: solid 1px #aaaaaa;
+   padding: 0.5em 0.5em 0.5em 0.0em;
+   background: #DAEAFA;
+   margin-top:1.0em;
+   margin-bottom:-0.1em;
+}
+
+.ns-0 #mw-content-text h3 {
+   clear: both;
+   padding-left: 0.0em;
+   background: #EAF3FC;
+   border-top: solid 1px #aaaaaa;
+   border-bottom: dotted 1px #aaaaaa;
+}
+
+ /* Inhaltsverzeichnis korrigieren */
+.ns-0 #toc h2 {
+   background: #f9f9f9;
+   border: none;
+   padding: 0;
+   font-size: 100%;
+   font-weight: bold;
+}
+
+/* allow inline hieroglyphs */
+.mw-hiero-outer {
+	display: inline-table;
+	vertical-align: middle;
+	font-size: 11px;
+}
+
+/* Kennzeichnung veralteter Vorlagen, vgl. [[Vorlage:veraltete Vorlage]] */
+.veralteteVorlage {
+   border: 1px dashed red;
+   padding: 1px;
+}
+
+
+/* Im Namensraum 106 = "Reim" die im Kategoriebereich enthaltenen
+** roten Links zu sprachübergreifenden Reimkategorien nicht anzeigen.
+** Siehe: [[Spezial:Permanentlink/8258666#Rotlinks_oder_Kategorien_mit_nur_einer_Seite?]]
+*/
+.ns-106 #mw-normal-catlinks a[href*="Kategorie:Reim_-"].new {
+  display: none; 	
+}
+
+
+/* Im Namensraum 106 = "Reim" die nach der Level-3-Überschrift = <h3>
+** folgenden Listelemente automatisch in mehreren Spalten anzeigen
+** nicht in den Menüs, deshalb Beschränkung auf mw-content-text
+*/
+.ns-106 #mw-content-text h3 ~ ul {
+  column-width: 11em; 	
+}
+
+
+/* Sorgt zusammen mit der Vorlage:AutoColumns dafür, dass die der Vorlage
+** folgenden Listelemente automatisch in mehreren Spalten angezeigt werden.
+** Nicht in den Menüs, deshalb Beschränkung auf mw-content-text
+*/
+#mw-content-text .li-auto-columsXS ~ ul {
+  column-width: 11em;
+  word-wrap: break-word;
+}
+#mw-content-text .li-auto-columsS ~ ul {
+  column-width: 13em;
+  word-wrap: break-word;
+}
+#mw-content-text .li-auto-columsM ~ ul {
+  column-width: 15em;
+  word-wrap: break-word;
+}
+#mw-content-text .li-auto-columsL ~ ul {
+  column-width: 19em;
+  word-wrap: break-word;
+}
+#mw-content-text .li-auto-columsXL ~ ul {
+  column-width: 23em;
+  word-wrap: break-word;
+}
+
+
+/* Ü-Tabelle automatisch in zwei Spalten aufteilen */
+@media (min-width: 768px) {
+  .uetab ~ ul {
+    column-gap: 2em;
+    column-count: 2;
+  }
+
+  /* Innerhalb einer geschachtelten Übersetzung einen Spaltenumbruch vermeiden */
+  .uetab ~ ul > li {
+    break-inside: avoid;  /* Chrome, Edge */
+    -webkit-column-break-inside: avoid;  /* webkit-Browser */
+    page-break-inside: avoid;  /* Firefox */
+  }
+
+  /* Bei nur einer Übersetzung Spaltung aufheben (nur eine Zeile über alle Spalten) */
+  .uetab ~ ul > li:only-of-type {
+    column-span: all;
+  }
+}
+
+/* Übersetzungseditor: Bullet für Listen aus optischen Gründen abschalten */
+ul.uluetab {
+  list-style-type: none !important;
+  list-style-image: none !important;
+}
