@@ -1,0 +1,105 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@fabi092
+nebulark /
+nebulark.github.io
+Public
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+
+    Insights
+
+nebulark.github.io/project.css
+@nebulark
+nebulark initial version
+Latest commit 7f863bf on 15 Oct 2019
+History
+1 contributor
+63 lines (50 sloc) 710 Bytes
+.content 
+{
+    margin: 0 auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: 50em;
+
+}
+
+.imagelist
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.imagelist > *
+{
+    margin: 0 auto;
+    flex: 1 1 23em;
+    max-width: 40em;
+    padding: 1em;
+}
+
+.imagelist *
+{
+    width: 100%;
+}
+
+
+.trailer
+{  
+    width: 100%;
+    margin: auto;
+}
+
+.caption
+{
+    text-align: center;
+    margin: auto;
+    padding-top: 0.3em;
+    font-size: 1em;
+    font-style: italic;
+}
+
+
+h1.title
+{
+    font-size: 2.5em;
+    /* text-align: center; */
+    margin: auto;
+    padding-bottom: 0.8em;
+}
+
+section.description
+{
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    line-height: 1.3em;
+    font-size: 1.2em;
+}
+
+
+    © 2021 GitHub, Inc.
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+Loading complete
