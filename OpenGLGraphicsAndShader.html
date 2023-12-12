@@ -36,15 +36,15 @@
 	dynamic generation of detailed rock formations.<br>
     -Created a variety of shapes within the rock structure, including outer boundaries, vertical columns, 
 	a central erasing column, planes, and a twisted form using procedural rules.<br>
-		<b>2. Parallax Mapping:</b><br>
-    -Implemented a Parallax Shader to create the illusion of depth on a flat surface using a depth map.<br>
-    -Achieved dynamic texture displacement to maintain the depth effect from various viewing angles.<br>
-			<b>3. Soft Shadows (VSM and PCF):</b><br>
-    -Implemented Variance Shadow Mapping (VSM) using Gaussian distribution for shadow softness and better realism.<br>
-	-Implemented Percentage Closer Filtering (PCF) for advanced shadow casting, allowing for a smoother transition between light and shadow.<br>
-			<b>4. Tesselation:</b><br>
+	<b>2. Tesselation:</b><br>
 	-Applied Tesselation to dynamically adjust the vertex density based on distance.<br>
     -Utilized different levels of tessellation for inner and outer edges, enhancing the visual quality of the scene.<br>
+	<b>3. Parallax Mapping:</b><br>
+    -Implemented a Parallax Shader to create the illusion of depth on a flat surface using a depth map.<br>
+    -Achieved dynamic texture displacement to maintain the depth effect from various viewing angles.<br>
+	<b>4. Soft Shadows (VSM and PCF):</b><br>
+    -Implemented Variance Shadow Mapping (VSM) using Gaussian distribution for shadow softness and better realism.<br>
+	-Implemented Percentage Closer Filtering (PCF) for advanced shadow casting, allowing for a smoother transition between light and shadow.<br>
       </p>
     </section>
 
@@ -58,21 +58,23 @@
           <img src="images/SPG_MarchingCubes.png" alt="1">
           <p class="caption">The Rock column generated with marching cubes using 2 different "noise" levels.</p>
         </section>
-		
+
         <section>
-          <img src="images/SPG_Depthmap.png" alt="2">
+          <img src="images/SPG_Tesselation.png" alt="2">
+          <p class="caption">Near and far look in Wireframemode with different vertice density due to tesselation.</p>
+        </section>
+	      
+        <section>
+          <img src="images/SPG_Depthmap.png" alt="3">
           <p class="caption">Near and far look at a flat plane that appears to have depth because of depth mapping</p>
         </section>
 
         <section>
-          <img src="images/SPG_Shadows.png" alt="3">
+          <img src="images/SPG_Shadows.png" alt="4">
           <p class="caption">Different shadows: 1. Hard shadows, 2. PCF, 3. VSM , 4. No shadows</p>
         </section>
 
-        <section>
-          <img src="images/SPG_Tesselation.png" alt="4">
-          <p class="caption">Near and far look in Wireframemode with different vertice density due to tesselation.</p>
-        </section>
+
 
         <!-- Empty elements to keep all boxes same size -->
         <section></section>
